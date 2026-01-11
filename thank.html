@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sunkissed Sips - Thank You</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .thank-you-container {
+            margin-top: 50px;
+            background-color: white;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: var(--shadow);
+            display: inline-block;
+            max-width: 600px;
+        }
+
+        .thank-you-msg {
+            font-size: 1.5rem;
+            color: var(--text-color);
+            margin: 20px 0;
+        }
+
+        .emoji-large {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            display: block;
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="thank-you-container">
+        <span class="emoji-large">💖</span>
+        <h2 class="menu-title">Thank You!</h2>
+        <p class="thank-you-msg">Your order has been placed successfully! <br> Get ready to sip in the sunshine! ☀️</p>
+
+        <div id="order-details"
+            style="text-align: center; margin: 20px 0; border-top: 2px dashed var(--secondary-color); padding-top: 20px;">
+            <h3 style="font-size: 1.5rem; margin-bottom: 10px;">🧾 Your Order:</h3>
+            <ul id="thank-you-list" style="list-style: none; padding: 0; display: inline-block; text-align: left;"></ul>
+            <p id="thank-you-total" class="price"
+                style="font-size: 1.4rem; display: block; text-align: center; margin-top: 15px;"></p>
+        </div>
+
+        <a href="index.html"><button class="menu-button">Back to Home 🏠</button></a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lastOrder = JSON.parse(localStorage.getItem("recentOrder"));
+            if (lastOrder && lastOrder.items.length > 0) {
+                const list = document.getElementById("thank-you-list");
+                const total = document.getElementById("thank-you-total");
+
+                list.innerHTML = lastOrder.items.map(item =>
+                    `<li style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 1.1rem; gap: 20px;">
+                        <span>${item.name.charAt(0).toUpperCase() + item.name.slice(1).replace('_', ' ')} x${item.quantity}</span>
+                    </li>`
+                ).join("");
+
+                total.textContent = "Total Paid: ₹ " + lastOrder.total;
+            }
+        });
+    </script>
+</body>
+
+</html>
