@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Confirmation - SunKissed Sips</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="cafe-name">SunKissed Sips</div>
+
+  <h2 class="confirmation-heading">Yay! Your Sips are on the way!</h2>
+
+  <div class="order-summary">
+    <h3>Order Summary</h3>
+    <ul id="order-items-list"></ul>
+    <p id="total-bill-summary">Total Bill: ₹ 0</p>
+  </div>
+
+  <div class="payment-section">
+    <h3>Select Mode of Payment:</h3>
+    <label><input type="radio" name="payment" value="cash" checked> Cash on Counter</label><br>
+    <label><input type="radio" name="payment" value="wallet"> Wallet Payment</label><br>
+    <label><input type="radio" name="payment" value="upi"> UPI Payment</label><br><br>
+
+    <a href="thank.html">
+      <button class="pay-btn">Pay</button>
+    </a>
+  </div>
+
+  <p class="thank-text">Thank you for choosing SunKissed Sips!<br>Enjoy your Sips & Crunch!</p>
+
+  <script>
+    // Sample order data from localStorage
+    const orderData = JSON.parse(localStorage.getItem("orderSummary")) || [];
+    const prices = {
+      pizza: 150, burger: 100, pasta: 120, samosa: 40, chicken_roll: 130,
+      fries: 60, nuggets: 90, sandwich: 80, wrap: 110,
+      coke: 50, lemonade: 60, coffee: 80, milkshake: 90, iced_tea: 70,
+      vanilla: 90, chocolate: 100, strawberry: 95, butterscotch: 105, mango: 95,
+      brownie: 110, pastry: 130, donut: 70, muffin: 85, cheesecake: 140
+    };
+
+    let total = 0;
+    const list = document.getElementById("order-items-list");
+
+    orderData.forEach(item => {
+      const li = document.createElement("li");
+      const itemTotal = prices[item.name] * item.quantity;
+      li.textContent = `${item.name.replace(/_/g, " ")} (x${item.quantity}) - ₹${itemTotal}`;
+      list.appendChild(li);
+      total += itemTotal;
+    });
+
+    document.getElementById("total-bill-summary").innerText = `Total Bill: ₹ ${total}`;
+  </script>
+
+</body>
+</html>
