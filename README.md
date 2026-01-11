@@ -17,3 +17,7 @@ Welcome to **Sunkissed Sips**, a cozy and interactive cafe ordering website! ☕
 -   **HTML5**: For the structure of the cafe.
 -   **CSS3**: For the cozy styling, animations, and responsive layout.
 -   **JavaScript**: For the logic behind the cart, total calculation, and local storage history.
+
+
+https://Malishkakotian17.github.io/sunkissed-sips/
+
