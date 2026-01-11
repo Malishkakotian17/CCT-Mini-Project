@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sunkissed Sips - Order</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="cafe-name">🌸 Sunkissed Sips 🌸</h1>
+    <h2 class="menu-title">✨ Select Your Treats ✨</h2>
+
+    <div class="menu-box">
+        <div class="category-box">
+            <h3>🍕 Snacks</h3>
+            <div class="item-row">
+                <span>Pizza (₹150)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="pizza">-</button>
+                    <span id="qty-pizza">0</span>
+                    <button class="qty-btn plus" data-item="pizza">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Burger (₹100)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="burger">-</button>
+                    <span id="qty-burger">0</span>
+                    <button class="qty-btn plus" data-item="burger">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Pasta (₹120)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="pasta">-</button>
+                    <span id="qty-pasta">0</span>
+                    <button class="qty-btn plus" data-item="pasta">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Samosa (₹40)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="samosa">-</button>
+                    <span id="qty-samosa">0</span>
+                    <button class="qty-btn plus" data-item="samosa">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Chicken Roll (₹130)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="chicken_roll">-</button>
+                    <span id="qty-chicken_roll">0</span>
+                    <button class="qty-btn plus" data-item="chicken_roll">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-box">
+            <h3>🥤 Drinks</h3>
+            <div class="item-row">
+                <span>Coke (₹50)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="coke">-</button>
+                    <span id="qty-coke">0</span>
+                    <button class="qty-btn plus" data-item="coke">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Lemonade (₹60)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="lemonade">-</button>
+                    <span id="qty-lemonade">0</span>
+                    <button class="qty-btn plus" data-item="lemonade">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Cold Coffee (₹80)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="coffee">-</button>
+                    <span id="qty-coffee">0</span>
+                    <button class="qty-btn plus" data-item="coffee">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Mojito (₹70)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="mojito">-</button>
+                    <span id="qty-mojito">0</span>
+                    <button class="qty-btn plus" data-item="mojito">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Milkshake (₹90)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="milkshake">-</button>
+                    <span id="qty-milkshake">0</span>
+                    <button class="qty-btn plus" data-item="milkshake">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-box">
+            <h3>🍦 Ice Cream</h3>
+            <div class="item-row">
+                <span>Vanilla (₹60)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="vanilla">-</button>
+                    <span id="qty-vanilla">0</span>
+                    <button class="qty-btn plus" data-item="vanilla">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Chocolate (₹70)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="chocolate">-</button>
+                    <span id="qty-chocolate">0</span>
+                    <button class="qty-btn plus" data-item="chocolate">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Strawberry (₹65)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="strawberry">-</button>
+                    <span id="qty-strawberry">0</span>
+                    <button class="qty-btn plus" data-item="strawberry">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Butterscotch (₹75)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="butterscotch">-</button>
+                    <span id="qty-butterscotch">0</span>
+                    <button class="qty-btn plus" data-item="butterscotch">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Mango (₹80)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="mango">-</button>
+                    <span id="qty-mango">0</span>
+                    <button class="qty-btn plus" data-item="mango">+</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-box">
+            <h3>🍰 Desserts</h3>
+            <div class="item-row">
+                <span>Brownie (₹110)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="brownie">-</button>
+                    <span id="qty-brownie">0</span>
+                    <button class="qty-btn plus" data-item="brownie">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Pastry (₹130)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="pastry">-</button>
+                    <span id="qty-pastry">0</span>
+                    <button class="qty-btn plus" data-item="pastry">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Donut (₹80)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="donut">-</button>
+                    <span id="qty-donut">0</span>
+                    <button class="qty-btn plus" data-item="donut">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Cupcake (₹90)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="cupcake">-</button>
+                    <span id="qty-cupcake">0</span>
+                    <button class="qty-btn plus" data-item="cupcake">+</button>
+                </div>
+            </div>
+            <div class="item-row">
+                <span>Muffin (₹85)</span>
+                <div class="quantity-control">
+                    <button class="qty-btn minus" data-item="muffin">-</button>
+                    <span id="qty-muffin">0</span>
+                    <button class="qty-btn plus" data-item="muffin">+</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="payment-section">
+        <h3>💳 Payment Mode</h3>
+        <div class="payment-options">
+            <div class="payment-option" onclick="selectPayment('cash')">
+                <span>💵</span> Cash
+            </div>
+            <div class="payment-option" onclick="selectPayment('upi')">
+                <span>📱</span> UPI
+            </div>
+            <div class="payment-option" onclick="selectPayment('card')">
+                <span>💳</span> Card
+            </div>
+        </div>
+    </div>
+
+    <div class="order-summary">
+        <p id="total-bill">Total Bill: ₹ 0</p>
+        <button onclick="goToConfirmation()">✨ Place Order ✨</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
