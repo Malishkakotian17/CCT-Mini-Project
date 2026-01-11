@@ -19,4 +19,3 @@ Welcome to **Sunkissed Sips**, a cozy and interactive cafe ordering website! ☕
 -   **JavaScript**: For the logic behind the cart, total calculation, and local storage history.
 
 
-file:///C:/Users/Malishka/OneDrive/Desktop/cafe/index.html
